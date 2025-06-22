@@ -1,6 +1,6 @@
 ;;; almost-mono-themes.el --- Almost monochromatic color themes -*- lexical-binding: t; -*-
 
-;; Copyright (c) 2019-2022 John Olsson
+;; Copyright (c) 2019-2025 John Olsson
 ;; Copyright (c) 2025 ixtenu
 
 ;; Author: John Olsson <john@cryon.se>
@@ -163,7 +163,22 @@
          (ido-vertical-match-face (:bold t :italic nil))
 
          ;; org mode
+         (org-drawer (:foreground ,weak))
+         (org-special-keyword (:bold t :foreground ,weak))
+         (org-property-value (:italic t :foreground ,weak))
          (org-table (:foreground ,weak))
+         (org-todo (:bold t :foreground ,foreground))
+         (org-done (:bold t :foreground ,weak))
+         (org-headline-todo (:bold nil :foreground ,foreground))
+         (org-headline-done (:bold nil :foreground ,foreground))
+
+         ;; various completion matches
+         (vertico-current (:bold nil :foreground ,foreground :background ,highlight))
+         (completions-common-part (:bold t :underline t))
+         (orderless-match-face-0 (:bold t :underline t))
+         (orderless-match-face-1 (:bold t :underline t))
+         (orderless-match-face-2 (:bold t :underline t))
+         (orderless-match-face-3 (:bold t :underline t))
 
          ))))
 
